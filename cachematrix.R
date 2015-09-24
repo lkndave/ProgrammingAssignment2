@@ -30,7 +30,8 @@ cacheSolve <- function(x, ...) {
   
   im <- x$getInverse()
   
-  if (is.null(im)) {
+  if (is.null(im)) { 
+    ## I chose to differ slightly from the example and check for null and solve in the if statment 
     message("Not Cached... Calculating Inverse...")
     im <- solve(x$getMatrix())
     x$setInverse(im)
